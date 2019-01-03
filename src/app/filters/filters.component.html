@@ -1,11 +1,11 @@
 <!-- <app-search></app-search> -->
 <button (click)="FilterLogs()">Apply</button>
+<app-filter-search></app-filter-search>
 <div class="applied-filters" *ngIf="appliedFilters.length!=0">
     <h3>Applied Filters</h3>
     <app-filter-key *ngFor="let filter of appliedFilters" [title]=filter.title [value]=filter.value>
     </app-filter-key>
 </div>
-<app-filter-search></app-filter-search>
 <div>
 <app-filter *ngFor="let item of facets | keyvalue" [title]=item.key [keys]=item.value>
 </app-filter>

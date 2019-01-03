@@ -17,7 +17,7 @@ export class FilterSearchComponent implements OnInit {
 
   constructor(private logsService: LogsService) {
     this.results = new Array<SelectedFilter>();
-    this.filterQuery = null;
+    this.filterQuery = "";
     this.filters = new Array<Filter>();
   }
 
@@ -27,17 +27,17 @@ export class FilterSearchComponent implements OnInit {
     });
   }
   Search() {
-    console.clear();
+    if(this.filterQuery.length<1)
+    {
+      return;
+    }
     this.results=new Array<SelectedFilter>();
     for (var key in this.facets) {
       for (var value in this.facets[key]) {
         if (this.facets[key][value].includes(this.filterQuery)) {
           this.results.push(new SelectedFilter(key,this.facets[key][value]));
-          console.log(this.facets[key][value]);
-          console.log(key);
         }
       }
     }
-    console.log(this.results);
   }
 }

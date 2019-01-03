@@ -4,3 +4,8 @@ input
     margin: 1%;
     height: 3%;
 }
+div
+{
+    max-height: 40%;
+    overflow: auto;
+}
