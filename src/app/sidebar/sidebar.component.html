@@ -1,0 +1,24 @@
+<!-- <img (click)="ToggleSideBar()" src="../../assets/images/sidebar.png" alt="SideBar" /> -->
+<br>
+<br>
+<br>
+<br>
+<br>
+<div>
+    <div *ngIf="clientId">
+        <p><b>Client ID</b></p>
+        <p>{{clientId}}</p>
+    </div>
+    <div *ngIf="tenantId">
+        <p><b>Tenant ID</b></p>
+        <p>{{tenantId}}</p>
+    </div>
+    <div *ngIf="ProgramId">
+        <p><b>Program ID</b></p>
+        <p>{{programId}}</p>
+    </div>
+    <div *ngIf="clientProgramGroupId">
+        <p><b>Program Group ID</b></p>
+        <p>{{clientProgramGroupId}}</p>
+    </div>
+</div>

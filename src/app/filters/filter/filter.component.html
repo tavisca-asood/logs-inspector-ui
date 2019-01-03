@@ -1,0 +1,4 @@
+<p (click)=OnClick()>{{title}}</p>
+<div [hidden]=hidden>
+<app-filter-key *ngFor="let key of keys" [value]=key [title]=title></app-filter-key>
+</div>

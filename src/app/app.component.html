@@ -1,0 +1,14 @@
+<img class="filters" src="../../assets/images/filters.png" alt="filters" (click)="ToggleFiltersBar()" />
+<!-- <img class="search" (click)="ToggleSearchBar()" src="../../assets/images/search.png" alt="search" /> -->
+<img class="sidebar" (click)="ToggleSideBar()" src="../../assets/images/sidebar.png" alt="SideBar" />
+<!-- <app-search [hidden]="searchBarDisplay"></app-search> -->
+<app-search></app-search>
+<app-filters *ngIf="filtersBarDisplay" [@filtersBarInOut] (UpdateFilters)="UpdateFilters($event)" (CloseFiltersbar)="CloseFiltersBar()"></app-filters>
+<app-sidebar *ngIf="sideBarDisplay" [@sideBarInOut] (CloseSideBar)="ToggleSideBar()"></app-sidebar>
+<ngx-spinner size="large" color="#c5c1c1" type="ball-clip-rotate-pulse" bdColor="rgba(197,193,193,0.50)">Fetching Logs</ngx-spinner>
+<div *ngIf="!response">
+        <p>
+            No Logs to display!
+        </p>
+</div>
+<app-graph *ngIf="response"></app-graph>

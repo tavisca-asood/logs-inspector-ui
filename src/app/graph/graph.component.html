@@ -1,0 +1,15 @@
+<div style="display:flex; align-items: center; justify-content: center">
+    <div (focus)="!showLogDetailsToggle" id="chartContainer" style="height: 90%; width:100%"></div>
+    <div *ngIf="showLogDetailsToggle" class="log-details-model">
+        <button class="model-close-btn" (click)="closeLogDetailsPopUp()">X</button>
+        <p>
+            <span class="key">AppName : </span><span class="value">{{ currentLogDetails.appName}}</span><br>
+            <span class="key">LogID : </span><span class="value">{{currentLogDetails.logId}}</span><br>
+            <span class="key">LogType :</span><span class="value">{{currentLogDetails.logType }}</span><br>
+        </p>
+        <p *ngFor="let key of logFieldsKeys">
+            <span class="key">{{ key}} : </span>
+            <span class="value">{{ currentLogDetails.fields[key] }}</span>
+        </p>
+    </div>
+</div>

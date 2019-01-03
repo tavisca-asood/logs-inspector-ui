@@ -1,0 +1,22 @@
+app-filter
+{
+    width: inherit;
+    background: red;
+    height: 2em;
+}
+button
+{
+    width: 98%;
+    margin: 1%;
+    height: 3%;
+}
+div
+{
+    max-height: 95%;
+    overflow: auto;
+}
+h3
+{
+    margin: 0;
+    margin-top: 5%;
+}

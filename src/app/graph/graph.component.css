@@ -1,0 +1,37 @@
+div
+{
+    height: 98vh; 
+    width: 100%;
+    /* margin-top:0.8em; */
+}
+.key{
+    color:rgb(77, 168, 238);
+}
+.value{
+    color: rgb(184, 113, 69);
+}
+.log-details-model{
+    word-wrap: break-word;
+    position: absolute;   
+    overflow-y: scroll;
+    max-height: 80vh;
+    background-color:#111;
+    z-index: "10";
+    width: 50%;
+    font-size: 1em;
+    line-height: 24px;
+    padding: 2rem;
+    overflow:auto;
+    /*box-shadow: 0px 0px 15px rgb(251, 253, 253);*/
+}
+.model-close-btn
+{
+    float: right;
+    border: none;
+    background-color:#666;
+    border: solid 1px #aaa;
+    padding: 0.45rem;
+    color:#efefef;
+    height: 30px;
+    
+}

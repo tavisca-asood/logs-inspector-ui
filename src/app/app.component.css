@@ -1,0 +1,64 @@
+app-search
+{
+    position: fixed;
+    left:4.2%;
+    top: 1%;
+    display:inline;
+    height:3%;
+    width: 90%;
+    z-index: 1;
+}
+app-filters
+{
+    position: fixed;
+    top: 5%;
+    width: 25%;
+    background-color: #ffffff;
+    height: 95.5%;
+    z-index: 2;
+    /* overflow-y:scroll; */
+}
+app-sidebar
+{
+    position: fixed;
+    left: 85%;
+    width: 15%;
+    height: 100%;
+    background-color: #c5c1c1;
+    z-index: 3;
+    top:5%;
+}
+.search
+{
+    cursor: pointer;
+    height: 30px;
+    position: fixed;
+    left: 2%;
+    z-index: 2;
+}
+.filters
+{
+    cursor: pointer;
+    height: 25px;
+    position: fixed;
+    top:1.2%;
+    z-index: 2;
+}
+.sidebar
+{
+    height: 25px;
+    position: fixed;
+    cursor: pointer;
+    top:1.5%;
+    left: 98%;
+    z-index: 2;
+}
+[hidden]
+{
+    display: none;
+}
+p
+{
+    font-size: 70px;
+    text-align: center;
+}

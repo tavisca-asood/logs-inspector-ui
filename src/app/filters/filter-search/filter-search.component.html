@@ -1,0 +1,4 @@
+<input type="text" placeholder="Search filters" [(ngModel)]=filterQuery (keyup)=Search()>
+<div *ngIf="results.length>0">
+<app-filter-key *ngFor="let key of results" [value]=key.value [title]=key.title></app-filter-key>
+</div>
