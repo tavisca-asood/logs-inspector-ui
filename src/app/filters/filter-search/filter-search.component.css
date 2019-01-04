@@ -6,6 +6,7 @@ input
 }
 div
 {
-    max-height: 40%;
+    background-color: #D3D3D3;
+    max-height: 90%;
     overflow: auto;
 }

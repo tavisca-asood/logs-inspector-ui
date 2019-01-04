@@ -1,8 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { SelectedFilter } from '../filter/selectedFilter';
 import { Filter } from 'src/app/filter';
 import { LogsService } from 'src/app/logs.service';
-import { map } from 'rxjs/operators';
 
 @Component({
   selector: 'app-filter-search',
@@ -14,6 +13,7 @@ export class FilterSearchComponent implements OnInit {
   filterQuery: string;
   filters: Array<Filter>;
   facets: any;
+  @Output() SearchFilters=new EventEmitter();
 
   constructor(private logsService: LogsService) {
     this.results = new Array<SelectedFilter>();
@@ -27,6 +27,14 @@ export class FilterSearchComponent implements OnInit {
     });
   }
   Search() {
+    if(this.filterQuery.length==0)
+    {
+      this.SearchFilters.emit("Show");
+    }
+    else
+    {
+      this.SearchFilters.emit("Hide");
+    }
     if(this.filterQuery.length<1)
     {
       return;

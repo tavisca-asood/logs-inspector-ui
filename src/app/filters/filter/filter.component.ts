@@ -8,7 +8,7 @@ import { Filter } from 'src/app/filter';
 })
 export class FilterComponent implements OnInit {
   @Input() title: string;
-  @Input() keys = new Array<string>();
+  @Input() keys: Array<string>;
   checkedFields: Array<string>;
   @Input() filter: Filter;
   @Output() UpdateFilters=new EventEmitter();
@@ -18,6 +18,7 @@ export class FilterComponent implements OnInit {
     this.checkedFields = new Array<string>();
     this.filter = new Filter();
     this.hidden=true;
+    this.keys= new Array<string>()
   }
 
   ngOnInit() {

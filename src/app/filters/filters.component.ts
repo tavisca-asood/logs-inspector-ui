@@ -14,10 +14,12 @@ export class FiltersComponent implements OnInit {
   response:any;
   appliedFilters:Array<SelectedFilter>;
   @Output() CloseFiltersbar = new EventEmitter();
+  displayFilters:boolean;
 
   constructor(private logsService: LogsService, private filterService: FiltersService) {
     this.logs = [];
     this.appliedFilters=new Array<SelectedFilter>();
+    this.displayFilters=true;
   }
 
   ngOnInit() {
@@ -57,5 +59,16 @@ export class FiltersComponent implements OnInit {
     this.CloseFiltersbar.emit();
     this.logs.logs = y;
     this.logsService.filteredResponse.next(this.logs);
+  }
+  SearchFilters($event)
+  {
+    if($event=="Hide")
+    {
+      this.displayFilters=false;
+    }
+    else
+    {
+      this.displayFilters=true;
+    }
   }
 }
