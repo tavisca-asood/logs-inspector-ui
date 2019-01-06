@@ -44,16 +44,22 @@ export class AppComponent implements OnInit {
     sideBarDisplay: boolean;
     response: any;
 
-    constructor(private logsService: LogsService,private sinner:NgxSpinnerService) {
+    constructor(private logsService: LogsService, private spinner: NgxSpinnerService) {
         this.searchBarDisplay = false;
         this.filtersBarDisplay = false;
         this.sideBarDisplay = false;
     }
     ngOnInit() {
         this.logsService.filteredResponse.subscribe((response) => {
-            this.sinner.hide();
-            if (response != null&&response.logs.length!=0) {
-                this.response = response.logs;
+            this.spinner.hide();
+            if (response != null) {
+                if(response.logs.length == 0)
+                {
+                    this.response=null;
+                }
+                else {
+                    this.response = response.logs;
+                }
             }
         });
     }
