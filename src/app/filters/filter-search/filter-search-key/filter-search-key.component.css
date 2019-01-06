@@ -1,0 +1,16 @@
+input
+{
+    float:right;
+}
+p
+{
+    padding-left: 2%;
+}
+.title
+{
+    background: grey;
+    cursor: pointer;
+    padding: 3%;
+    margin: 0;
+    margin-bottom: 1%;
+}

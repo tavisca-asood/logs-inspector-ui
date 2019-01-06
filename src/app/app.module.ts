@@ -15,6 +15,7 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 import { FilterComponent } from './filters/filter/filter.component';
 import { FilterKeyComponent } from './filters/filter/filter-key/filter-key.component';
 import { FilterSearchComponent } from './filters/filter-search/filter-search.component';
+import { FilterSearchKeyComponent } from './filters/filter-search/filter-search-key/filter-search-key.component';
 
 const appRoutes: Routes =
   [
@@ -32,7 +33,8 @@ const appRoutes: Routes =
     SidebarComponent,
     FilterComponent,
     FilterKeyComponent,
-    FilterSearchComponent
+    FilterSearchComponent,
+    FilterSearchKeyComponent
   ],
   imports: [
     BrowserModule,

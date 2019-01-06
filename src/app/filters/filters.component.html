@@ -2,7 +2,7 @@
 <button (click)="FilterLogs()">Apply</button>
 <app-filter-search (SearchFilters)="SearchFilters($event)"></app-filter-search>
 <div class="applied-filters" *ngIf="appliedFilters.length!=0">
-    <h3>Applied Filters</h3>
+    <h3>Selected Filters</h3>
     <app-filter-key *ngFor="let filter of appliedFilters" [title]=filter.title [value]=filter.value>
     </app-filter-key>
 </div>
